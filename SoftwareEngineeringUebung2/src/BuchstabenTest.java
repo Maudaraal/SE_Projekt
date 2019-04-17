@@ -19,12 +19,12 @@ public class BuchstabenTest implements Projekt1 {
 		
 		System.out.println(s);
 		
-		if(isWellSortet(regeln,s)== true) {System.out.println("yeyyy");}
-		if(isWellSortet(regeln,s)== false) {System.out.println("noooo");}
+		if(isWellSortet(s)== true) {System.out.println("yeyyy");}
+		if(isWellSortet(s)== false) {System.out.println("noooo");}
 	}
 	
 	
-	public static boolean isWellSortet(String s [][] , String s2 []) {
+	public static boolean isWellSortet(String s2 []) {
        
 		String erstesZeichen, folgeZeichen = null, folgeZeichen2 = null, folgeZeichen3 = null, zweitesZeichen , drittesZeichen, viertesZeichen , fuenftesZeichen;
         erstesZeichen = s2[0];
