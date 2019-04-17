@@ -13,58 +13,34 @@ public class BuchstabenTest implements Projekt1 {
 		//[2][0] = B . [2][1]= C
 		// Regel: A<C<D und B<C<D
 		
-		for(int i = 0; i< s.length ;i++) {
+		for(int i = 0; i< (s.length-1) ;i++) {
 			s[i] = JOptionPane.showInputDialog("Bitte geben Sie einen der Buchstaben A B C D ein");
 		}
 		
 		System.out.println(s);
 		
-		isWellSortet(regeln,s);
-	
+		if(isWellSortet(regeln,s)== true) {System.out.println("yeyyy");}
+		if(isWellSortet(regeln,s)== false) {System.out.println("noooo");}
 	}
 	
 	
 	public static boolean isWellSortet(String s [][] , String s2 []) {
        
-		String erstesZeichen, folgeZeichen = null, zweitesZeichen , drittesZeichen, viertesZeichen , fuenftesZeichen;
+		String erstesZeichen, folgeZeichen = null, folgeZeichen2 = null, folgeZeichen3 = null, zweitesZeichen , drittesZeichen, viertesZeichen , fuenftesZeichen;
         erstesZeichen = s2[0];
         zweitesZeichen = s2[1];
         drittesZeichen = s2[2];
         viertesZeichen = s2[3];
         fuenftesZeichen = s2[4];
-        
-        if(fuenftesZeichen.equals(" ")) {
-        	
-        	if(erstesZeichen.equals("A")) {}
-        	if(erstesZeichen.equals("B")) {}
-        	if(erstesZeichen.equals("C")) {}
-        	if(erstesZeichen.equals("D")) {
-        		
-        	}
-        }	
+       
+        if(erstesZeichen.equals("A")&zweitesZeichen.equals("B")&drittesZeichen.equals("C")&viertesZeichen.equals("D")) {return true;
+        }else{
+        	if(erstesZeichen.equals("B")&zweitesZeichen.equals("A")&drittesZeichen.equals("C")&viertesZeichen.equals("D")) {return true;
+        	}else return false;
+        }
+	}
         
         
-        return true;
-    }
-	
-	
-	
-	
-	
-	public void methode() {
-		for( int i=0; i<=s.length; i++ ){
-            if( s[i][0] == erstesZeichen ){
-                folgeZeichen = s[i][1];
-            }
-            while( zweitesZeichen != folgeZeichen){
-                for( int j=0; j<= s.length; j++ ){
-                    if( s[j][0] == folgeZeichen ){
-                        folgeZeichen = s[i][0];
-                    }
-                }
-            }
-		}    
-	} 
 }
 
 	
